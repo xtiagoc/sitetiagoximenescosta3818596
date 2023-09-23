@@ -1,0 +1,63 @@
+<!DOCTYPE html>  <!-- Padrão do Início para página HTML -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">  <!-- Referência ao arquivo styles do CSS -->
+    <title>Contato - Tiago Ximenes Costa</title>  <!-- Título da Página -->
+</head>
+
+<!-- Trabalho para disciplina Ferramentas e Desenvolvimento WEB - TIAGO XIMENES COSTA - RU: 3818596 - Uninter -->
+
+<body>
+    <header>
+        <nav class="menu">  <!-- Classe para menu com referências aos links do site -->
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="sobremim.html">Sobre Mim</a></li>
+                <li><a href="formacao.html">Minha Formação</a></li>
+                <li><a href="portfolio.html">Meu Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contato">  <!-- Classe para haver os inputs do contato -->
+        <h1>Contato</h1>
+        <p>
+            <p style="margin-bottom: 20px;"></p> <!-- Espaço entre título e texto -->
+            Deseja saber mais sobre mim, conversar comigo ou oferecer alguma oportunidade?  <!-- Texto de Apresentação -->
+            Sou aberto a qualquer contato!
+            Por favor, preencha as informações a seguir:
+            <p style="margin-bottom: 20px;"></p>
+        </p>
+        
+        <form action="" method="post">
+            <div class="input-group">
+                <label for="nome">Nome:</label>  <!-- Input do Nome -->
+                <input type="text" id="nome" name="nome" class="small-input" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">E-mail:</label>  <!-- Input do E-mail -->
+                <input type="email" id="email" name="email" class="small-input" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="mensagem">Mensagem:</label>  <!-- Input da Mensagem -->
+                <textarea id="mensagem" name="mensagem" rows="4" required style="resize: none;"></textarea> <!-- Impede alterar tamanho da caixa de input -->
+            </div>
+    
+            <div class="button-group"> <!-- Botão para enviar conteúdo escrito e Botão para apagar o conteúdo escrito no input -->
+                <input type="submit" onclick="alert('Mensagem enviada com sucesso! Irei respondê-la o mais breve possível. Obrigado!')" value="Enviar">
+                <input type="reset" value="Apagar">
+            </div>
+        </form>
+    </section>
+
+    <div class="assinatura">  <!-- Classe para assinatura ao final da página -->
+        <p> CV Virtual Tiago</p>
+    </div>
+
+</body>
+</html>
