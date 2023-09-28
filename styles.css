@@ -15,9 +15,10 @@ body {
 }
 /* Estilo do cabeçalho */
 header {
-    background: linear-gradient(135deg, #111, #333);
+    background: rgba(0, 0, 0, 0.8);
     padding: 20px 0;
     transition: background-color 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 /* Cor barra de navegação */
 nav ul {
@@ -85,6 +86,7 @@ section {
     text-decoration: underline; /* Altera o estilo dos links quando o mouse passa por cima */
 }
 
+
 /* Caixa do conteudo de cada link */
 section {
     padding: 40px;
@@ -95,18 +97,37 @@ section {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Código para Estilo da Assinatura em todos os links: */
-.assinatura {
-    text-align: center; 
-    background-color: #333; 
+
+/* Títulos de todos os links com caixa vermelha e borda arredondada */
+.red-title {
+    background-color: #f02626; 
     color: #fff; 
     padding: 10px; 
+    border-radius: 5px; 
+    margin-bottom: 15px; 
 }
+
+
+/* Código para Estilo da Assinatura em todos os links: */
+.assinatura {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+}
+
 
 /* Código para Início.html: */
 .conteudoinicio {
     display: flex; /* forma e centralização do conteúdo */
-    align-items: center; 
+    align-items: center;
+    opacity: 0;  /* Define opacidade e intervalo de tempo para aparecimento do conteudo da pagina */
+    animation: fadeIn 1s ease-in-out forwards; 
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;  /* Opacidade maxima do conteudo apos tempo de 1s */
+    }
 }
 .textoinicio {
     flex: 1; /* Ocupa o máximo de espaço possível */
@@ -117,6 +138,27 @@ section {
 .imageminicio {
     margin-left: 20px; /* coloca imagem à direita */
 }
+.imageminicio img {
+    border-radius: 50%; /* Coloca borda arredondada na imagem */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;  /* Tempo de transição ao passar o mouse */
+}
+.imageminicio img:hover {
+    transform: scale(1.1); /* Aumenta tamanho imagem ao passar o mouse */
+}
+.vamos-juntos {  /* Adiciona animação ao texto "Vamos Juntos" */
+    animation: fade 2s infinite alternate;
+    opacity: 0; /* Começa com a opacidade 0 */
+}
+@keyframes fade {  /* Animação Fade para Vamos Juntos */
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; /* Fica visivel */
+    }
+}
+
 
 /* Código para Sobremim.html: */
 .conteudosobremim {
@@ -128,10 +170,23 @@ section {
 }
 .textosobremim p {
     line-height: 2.0; /* Espaçamento entre as linhas */
+    transition: color 0.3s ease-in-out;  /* Tempo de transição apos passar o mouse e alterar a cor do texto */
 }
-.imagemsobremim {
+.textosobremim p:hover { /* Altera a cor do texto e coloca negrito ao passar o mouse sobre o texto*/
+    color: #f02626; 
+    font-weight: bold; 
+}
+.imagemsobremim {  /* Ajusta posição imagem*/
     margin-left: 20px;
-    margin-top: -740px; /* coloca imagem à direita */
+    margin-top: -780px; 
+}
+.imagemsobremim img {
+    border-radius: 50%; /* Coloca borda arredondada na imagem */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease-in-out;  /* Tempo de transição ao passar o mouse */
+}
+.imagemsobremim img:hover {
+    transform: scale(1.1); /* Aumenta tamanho imagem ao passar o mouse */
 }
 
 /* Código para Contato.html: */
@@ -146,6 +201,50 @@ section {
 .small-input {
     width: 200px; /* Largura desejada para caixas de input do e-mail e nome */
 }
+.input-group input[type="text"],  /* Estilo para caixas de input */
+.input-group input[type="email"],
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f02626; /* Cor da borda */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.input-group label {   /* Estilo para labels */
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+.button-group input[type="submit"] {  /* Estilo para o botão Enviar */
+    background-color: #f02626;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.button-group input[type="submit"]:hover {  /* Estilo para o botao Enviar quando passar o mouse */
+    background-color: #9c1c1c;
+}
+.button-group input[type="reset"] {  /* Estilo para o botao Apagar */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.button-group input[type="reset"]:hover {  /* Estilo para o botão Apagar quando passa o mouse */
+    background-color: #111; 
+}
+
 
 /* Código para Portfolio.html: */
 .textoportfolio a {
